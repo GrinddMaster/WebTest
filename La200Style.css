@@ -1,0 +1,13 @@
+.La200{
+    float: right;
+    margin-right: 500px;
+    margin-left: 1500px;
+}
+.la200txt{
+    font-size: 21px;
+    font-family: "JetBrains Mono SemiBold", cursive;
+}
+.table,th{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
