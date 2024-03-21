@@ -4,7 +4,7 @@
     margin-left: 900px;
     margin-top: 20px;
     border: 100px;
-    position: fixed;
+    
 }
 .Header ,h1
 {
@@ -15,4 +15,10 @@
     border-collapse: collapse;
     
        
+}
+.Mig-15{
+    float: right;
+    margin-right: 200px;
+    max-width: 30%;
+    height: auto;
 }
