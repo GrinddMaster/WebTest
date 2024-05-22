@@ -32,7 +32,7 @@ app.get('/registplane',(req,res)=>{
 })
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/register', (req, res) => {
+app.post('/register', (req, res) => { //Adds a new user to the DB
     const UserData = 
     {
         Name: req.body.name,
@@ -47,7 +47,7 @@ app.post('/register', (req, res) => {
     });
 })
 
-app.post('/registplane', (req, res) => {
+app.post('/registplane', (req, res) => { // Adds a new plane to the DB
     const PlaneData = 
     {
         Name: req.body.aircraftName,
@@ -61,4 +61,3 @@ app.post('/registplane', (req, res) => {
         console.log(err);
     });
 })
-
