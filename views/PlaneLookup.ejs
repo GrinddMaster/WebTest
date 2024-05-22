@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Registration Form</title>
+    <style>
+        /* Center the form */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+        }
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        /* Underline the title */
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div>
+        <h1 style="text-align: center;">Aircraft Lookup </h1>
+        <form action="/register" method="post">
+            <label for="aircraftName">Aircraft Name:</label>
+            <input type="text" id="aircraftName" name="aircraftName" required>
+            <br>
+            <label for="countryName">Country Name:</label>
+            <select id="countryName" name="countryName" required>
+                <option value="USA">USA</option>
+                <option value="Russia">Russia</option>
+            </select>
+            <br>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</body>
+</html>

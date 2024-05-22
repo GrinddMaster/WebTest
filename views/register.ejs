@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            text-align: center;
+        }
+        h1 {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="password"] {
+            padding: 5px;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 15px 25px; /* Increased padding for larger button text */
+            cursor: pointer;
+        }
+        .field-spacing {
+            margin-bottom: 5px; /* Vertical space between input fields */
+        }
+    </style>
+</head>
+<body>
+    <form action="/register" method="POST">
+        <h1>Register</h1>
+        <div class="field-spacing">
+            <label for="name" style="font-weight: bold;">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field-spacing">
+            <label for="age" style="font-weight: bold;" >Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <div class="field-spacing">
+            <label for="password" style="font-weight: bold;">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit" value="Submit" style="font-size: 20px;">
+    </form>
+</body>
+</html>

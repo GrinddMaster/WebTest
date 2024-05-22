@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Registration Form</title>
+    <style>
+        /* Center the form */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+        }
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        /* Underline the title */
+        h1 {
+            text-decoration: underline;
+        }
+        /* Add vertical spacing between textarea and button */
+        textarea {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">Aircraft Registration</h1>
+        <form action="/registplane" method="post">
+            <label for="aircraftName">Aircraft Name:</label>
+            <input type="text" id="aircraftName" name="aircraftName" required>
+            <br>
+            <label for="countryName">Country Name:</label>
+            <select id="countryName" name="countryName" required>
+                <option value="USA">USA</option>
+                <option value="Russia">Russia</option>
+            </select>
+            <br>
+            <!-- Add the Information field -->
+            <label for="information">Information:</label>
+            <textarea id="information" name="information" rows="5" cols="40"></textarea>
+            <br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
