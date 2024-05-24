@@ -1,36 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aircraft Registration Form</title>
-    <link rel="stylesheet" type="text/css" href="/StyleSheets/PlaneLKP.css">
-</head>
-<body style="background-color: beige;">
-    
-    
-    <div>
-        <h1 style="text-align: center;">Aircraft Lookup </h1>
-        <form action="/register" method="post" id="LookUpForm">
-            <label for="aircraftName">Aircraft Name:</label>
-            <input type="text" id="aircraftName" name="aircraftName" required>
-            <br>
-            <label for="countryName">Country Name:</label>
-            <select id="countryName" name="countryName" required>
-                <option value="USA">USA</option>
-                <option value="Russia">Russia</option>
-            </select>
-            <br>
-            <input type="submit" value="Search">
-        </form>
-    </div>
-    <script>
-        document.getElementById("LookUpForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const AirCName = document.getElementById("aircraftName").value;
-            const CountryName = document.getElementById("countryName").value;
-            // You can add your login logic here (e.g., validate credentials, redirect to dashboard, etc.)
-        });
-    </script>
-</body>
-</html>
+<script>
+    document.getElementById("LookUpForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const AirCName = document.getElementById("aircraftName").value;
+        const CountryName = document.getElementById("countryName").value;
+
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Configure it: GET-request for the URL /register
+        xhr.open('POST', '/register', true);
+
+        // Send the proper header information along with the request
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // Create a state change callback 
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Print received data from server
+                console.log(this.responseText);
+            }
+        };
+
+        // Convert data to URL-encoded string
+        var data = `aircraftName=${encodeURIComponent(AirCName)}&countryName=${encodeURIComponent(CountryName)}`;
+
+        // Send the request over the network
+        xhr.send(data);
+    });
+</script>
