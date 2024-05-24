@@ -1,24 +1,29 @@
-#signup-link, #addplane-link {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-    color: #007bff;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#signup-link:hover, #addplane-link:hover {
-    color: #0056b3;
-}
-<button type="submit" onclick="MoveToWelcomePage()">Login</button>
-<a href="/signup" id="signup-link">Signup</a>
-<a href="/addplane" id="addplane-link">AddPlane</a>
-
-document.getElementById("signup-link").addEventListener("click", function(event) {
-    // Your signup logic here
-});
-
-document.getElementById("addplane-link").addEventListener("click", function(event) {
-    // Your addplane logic here
-});
+<!DOCTYPE html>
+<html>
+    <head><title>Welcome To WAirForce</title></head>
+    <body style="background-color: beige;">
+        <h1 style="text-align: center;">Welcome To WAirForce </h1>
+        <div style = "margin:20cap;background-color: beige;">
+            <table border="7">
+                
+                <th>Page</th>
+                <th style="width:40cap ;">AirCraft Name</th>
+                <tr >
+                    <td><a href="/1">1</a></td>
+                    <td>La 200</td>
+                    
+                </tr>
+                <tr >
+                    <td><a href="/2">2</a></td>
+                    <td>Mig-15</td>
+                </tr>
+                <tr >
+                    <td><a href="/3">3</a></td>
+                    <td>Me-262</td>
+                </tr>
+            </table>
+            
+        
+        </div>
+    </body>
+</html>
