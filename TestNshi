@@ -1,109 +1,24 @@
+#signup-link, #addplane-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fighter Jets Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            position: relative;
-        }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        .welcome-message {
-            font-weight: bold;
-            text-decoration: underline;
-            margin-bottom: 20px;
-            font-size : 50px;
-            text-align: center;
-        }
-        .fighter-image {
-            flex: 1;
-            padding: 10px;
-        }
-        .fighter-image img {
-            width: 350px;
-            height: 350px;
-        }
-        .login-form {
-            flex: 2;
-            padding: 10px;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .fighter-image-right {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .fighter-image-right img {
-            margin-top: 60px;
-            width: 350px;
-            height:350px;
-        }
-    </style>
-</head>
-<body>
-    <div class="welcome-message">Welcome to Fighter Jets History!</div>
-    <div class="fighter-image">
-        <img src="https://th.bing.com/th/id/R.0598e46461f2645e51f28ff8af21c9f4?rik=seFfC0Y46fJ6Xg&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2fc%2fc9%2fF-16_June_2008.jpg&ehk=RvI7pilvJEZ48gVtixklQ9huylFfQwXCiHalCE8fmkQ%3d&risl=1&pid=ImgRaw&r=0" alt="F-16 Fighter Jet">
-    </div>
-    <div class="container">
-        <div class="login-form">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit" onclick="MoveToWelcomePage()">Login</button>
-            </form>
-        </div>
-    </div>
-    <div class="fighter-image-right">
-        <img src="https://www.digitalcombatsimulator.com/upload/iblock/76e/Screen_181102_122735.jpg" alt="MiG-29 Fighter Jet">
-    </div>
+#signup-link:hover, #addplane-link:hover {
+    color: #0056b3;
+}
+<button type="submit" onclick="MoveToWelcomePage()">Login</button>
+<a href="/signup" id="signup-link">Signup</a>
+<a href="/addplane" id="addplane-link">AddPlane</a>
 
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            // You can add your login logic here (e.g., validate credentials, redirect to dashboard, etc.)
-            
-        });
-        function MoveToWelcomePage() {
-            window.location.href = "/Welcome";
-        }
-    </script>
-</body>
-</html>
+document.getElementById("signup-link").addEventListener("click", function(event) {
+    // Your signup logic here
+});
+
+document.getElementById("addplane-link").addEventListener("click", function(event) {
+    // Your addplane logic here
+});
