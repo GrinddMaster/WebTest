@@ -5,13 +5,11 @@
         <h1 style="text-align: center;">Welcome To WAirForce </h1>
         <div style = "margin:20cap;background-color: beige;">
             <table border="7">
-                
                 <th>Page</th>
                 <th style="width:40cap ;">AirCraft Name</th>
                 <tr >
                     <td><a href="/1">1</a></td>
                     <td>La 200</td>
-                    
                 </tr>
                 <tr >
                     <td><a href="/2">2</a></td>
@@ -22,8 +20,8 @@
                     <td>Me-262</td>
                 </tr>
             </table>
-            
-        
+            <!-- Add your button here -->
+            <button style="display: block; width: 200px; height: 50px; margin: 20px auto; background-color: blue; color: white; border: none; border-radius: 5px;">Search</button>
         </div>
     </body>
 </html>
