@@ -2,12 +2,12 @@
     float: right;
     width: 20cap;
     height: 20cap;
-    margin-right: 500px;
+    margin-right: 20cap;
     margin-left: 1500px;
 }
 .la200txt{
     font-size: 21px;
-    font-family: "JetBrains Mono SemiBold", cursive;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .table,th{
     border: 2px solid black;

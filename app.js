@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const User = require('/home/lol/WebProject/Web-Proj/HTML/models/users.js');
 const Plane = require('/home/lol/WebProject/Web-Proj/HTML/models/planes.js');
 const path = require('path');
-
+const bodyparser = require("body-parser");
 const app = express();
 
-
+app.use(bodyparser.urlencoded({ extended: true }));
 
 mongoose.connect('mongodb://localhost:27017/admin')
 .then(()=>{
@@ -40,6 +40,18 @@ app.get('/Welcome',(req,res)=>{
     res.status(200);
     res.render('WelcomLogin');
 })
+app.get('/LookUp',(req,res)=>{
+    res.status(200);
+    res.render('PlaneLookup');
+})
+app.get('/LookUp/:id',(req,res)=>{
+    const id = req.params.id;
+    res.status(200);
+    Plane.findById(id).then((result)=>{
+        res.render('PlaneLookup', {Information: result.Country});
+    })
+})
+
 
 app.use(express.urlencoded({ extended: true }));
 
