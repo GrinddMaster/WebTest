@@ -40,24 +40,7 @@ app.get('/Welcome',(req,res)=>{
     res.status(200);
     res.render('WelcomLogin');
 })
-app.get('/:id',(req,res)=>{
-    const id = req.params.id;
-    if (id == 1)
-        {
-            res.status(200);
-            res.render('First');
-        }
-    if (id == 2)
-        {
-            res.status(200);
-            res.render('Mig15');
-        }
-    if (id == 3)
-        {
-            res.status(200);
-            res.render('Me262');
-        }    
-})
+
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/register', (req, res) => { //Adds a new user to the DB
@@ -88,4 +71,22 @@ app.post('/registplane', (req, res) => { // Adds a new plane to the DB
     }).catch((err) => {
         console.log(err);
     });
+})
+app.get('/:id',(req,res)=>{
+    const id = req.params.id;
+    if (id == 1)
+        {
+            res.status(200);
+            res.render('First');
+        }
+    if (id == 2)
+        {
+            res.status(200);
+            res.render('Mig15');
+        }
+    if (id == 3)
+        {
+            res.status(200);
+            res.render('Me262');
+        }    
 })
