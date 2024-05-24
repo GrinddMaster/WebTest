@@ -94,7 +94,6 @@
     </div>
 
     <script>
-        export default {username};
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
             const username = document.getElementById("username").value;
