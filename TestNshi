@@ -21,7 +21,12 @@
                 </tr>
             </table>
             <!-- Add your button here -->
-            <button style="display: block; width: 200px; height: 50px; margin: 20px auto; background-color: blue; color: white; border: none; border-radius: 5px;">Search</button>
+            <button onclick="LookUp()" style="display: block; width: 200px; height: 50px; margin: 20px auto; background-color: blue; color: white; border: none; border-radius: 5px;">Search</button>
         </div>
+        <script>
+            function LookUp() {
+                window.location.href = "/LookUp";
+            }
+        </script>
     </body>
 </html>
