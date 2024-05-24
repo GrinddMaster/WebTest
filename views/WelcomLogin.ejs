@@ -2,17 +2,14 @@
 <html>
     <head><title>Welcome To WAirForce</title></head>
     <body style="background-color: beige;">
-        <%var name = "Default"%>
-        <h1 style="text-align: center;">Welcome To WAirForce <%= name %></h1>
+        <h1 style="text-align: center;">Welcome To WAirForce </h1>
         <div style = "margin:20cap;background-color: beige;">
-            <table border="7">
-                
+            <table border="7" style="margin-left: 10cap;">
                 <th>Page</th>
                 <th style="width:40cap ;">AirCraft Name</th>
                 <tr >
                     <td><a href="/1">1</a></td>
                     <td>La 200</td>
-                    
                 </tr>
                 <tr >
                     <td><a href="/2">2</a></td>
@@ -23,8 +20,13 @@
                     <td>Me-262</td>
                 </tr>
             </table>
-            
-        
+            <!-- Add your button here -->
+            <button onclick="LookUp()" style="display: block; width: 200px; height: 50px; margin: 20px auto; background-color: blue; color: white; border: none; border-radius: 5px; cursor: pointer;">Search</button>
         </div>
+        <script>
+            function LookUp() {
+                window.location.href = "/LookUp";
+            }
+        </script>
     </body>
 </html>
