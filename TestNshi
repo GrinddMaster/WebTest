@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head><title>Welcome To WAirForce</title></head>
-    <body style="background-color: beige;">
-        <h1 style="text-align: center;">Welcome To WAirForce </h1>
-        <div style = "margin:20cap;background-color: beige;">
-            <table border="7">
-                <th>Page</th>
-                <th style="width:40cap ;">AirCraft Name</th>
-                <tr >
-                    <td><a href="/1">1</a></td>
-                    <td>La 200</td>
-                </tr>
-                <tr >
-                    <td><a href="/2">2</a></td>
-                    <td>Mig-15</td>
-                </tr>
-                <tr >
-                    <td><a href="/3">3</a></td>
-                    <td>Me-262</td>
-                </tr>
-            </table>
-            <!-- Add your button here -->
-            <button onclick="LookUp()" style="display: block; width: 200px; height: 50px; margin: 20px auto; background-color: blue; color: white; border: none; border-radius: 5px; cursor: pointer;">Search</button>
-        </div>
-        <script>
-            function LookUp() {
-                window.location.href = "/LookUp";
-            }
-        </script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="/StyleSheets/PlaneLKP.css">
+</head>
+<body style="background-color: beige;">
+    
+    
+    <div>
+        <h1 style="text-align: center;">Aircraft Lookup </h1>
+        <form action="/register" method="post" id="LookUpForm">
+            <label for="aircraftName">Aircraft Name:</label>
+            <input type="text" id="aircraftName" name="aircraftName" required>
+            <br>
+            <label for="countryName">Country Name:</label>
+            <select id="countryName" name="countryName" required>
+                <option value="USA">USA</option>
+                <option value="Russia">Russia</option>
+            </select>
+            <br>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <script>
+        document.getElementById("LookUpForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const AirCName = document.getElementById("aircraftName").value;
+            const CountryName = document.getElementById("countryName").value;
+            // You can add your login logic here (e.g., validate credentials, redirect to dashboard, etc.)
+        });
+    </script>
+</body>
 </html>
