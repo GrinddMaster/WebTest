@@ -1,0 +1,26 @@
+.La200{
+    float: right;
+    width: 20cap;
+    height: 20cap;
+    margin-right: 500px;
+    margin-left: 1500px;
+}
+.la200txt{
+    font-size: 21px;
+    font-family: "JetBrains Mono SemiBold", cursive;
+}
+.table,th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    
+       
+}
+.La-200{
+    float: right;
+    margin-right: 240px;
+    
+}
+.Header ,h1
+{
+    text-align: center;
+}

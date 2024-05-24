@@ -2,7 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const User = require('/home/lol/WebProject/Web-Proj/HTML/models/users.js');
 const Plane = require('/home/lol/WebProject/Web-Proj/HTML/models/planes.js');
+const path = require('path');
+
 const app = express();
+
+
 
 mongoose.connect('mongodb://localhost:27017/admin')
 .then(()=>{
@@ -13,7 +17,9 @@ mongoose.connect('mongodb://localhost:27017/admin')
     console.log(err);
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
+
 
 
 
@@ -30,6 +36,28 @@ app.get('/registplane',(req,res)=>{
     res.status(200);
     res.render('registplane');
 })
+app.get('/Welcome',(req,res)=>{
+    res.status(200);
+    res.render('WelcomLogin');
+})
+app.get('/:id',(req,res)=>{
+    const id = req.params.id;
+    if (id == 1)
+        {
+            res.status(200);
+            res.render('First');
+        }
+    if (id == 2)
+        {
+            res.status(200);
+            res.render('Mig15');
+        }
+    if (id == 3)
+        {
+            res.status(200);
+            res.render('Me262');
+        }    
+})
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/register', (req, res) => { //Adds a new user to the DB
@@ -40,7 +68,7 @@ app.post('/register', (req, res) => { //Adds a new user to the DB
         Password: req.body.password
     };
     const user = new User(UserData);
-    user.save().then((result) =>{
+    user.save().then(() =>{
         res.redirect('/');
     }).catch((err) => {
         console.log(err);
