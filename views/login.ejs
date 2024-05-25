@@ -19,7 +19,7 @@
                 <input type="text" id="username" name="username" required>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
-                <button type="submit" onclick="MoveToWelcomePage()">Login</button>
+                <button type="submit">Login</button>
                 <a href="/register" id="signup-link">Signup</a>
                 <a href="/registplane" id="addplane-link">AddPlane</a>
             </form>
@@ -30,14 +30,30 @@
     </div>
 
     <script>
-        const username = "";
-        const password ="";
-        const flag = 0;
+        var username = "";
+        var password ="";
+        var flag = 0;
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
              username = document.getElementById("username").value;
              password = document.getElementById("password").value;
+             if(username == "" || password == "")
+        {
+            window.location.href = "/login";
+            alert("Please enter username and password");
+            flag = 1;
+        }
+        else{flag = 0;}
+            if(flag == 0)
+            {
+               
             
+          
+                window.location.href = "/Welcome";
+            
+        }
+            
+        
             
         });
         document.getElementById("signup-link").addEventListener("click", function(event) 
@@ -49,14 +65,9 @@
         {
              // Your addplane logic here
         });
-        function MoveToWelcomePage() 
-        {
-            
-         
-          
-                window.location.href = "/Welcome";
-            
-        }
+        
+        
+        
     </script>
 </body>
 </html>
